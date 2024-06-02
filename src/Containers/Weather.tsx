@@ -267,8 +267,8 @@ const Weather: React.FC = () => {
                                 <ForecastCard
                                     key={index}
                                     date={day.date}
-                                    maxTemp={tempUnit === 'C' ? day.day.maxtemp_c : ((day.day.maxtemp_c * 9/5) + 32).toFixed(1)}
-                                    minTemp={tempUnit === 'C' ? day.day.mintemp_c : ((day.day.mintemp_c * 9/5) + 32).toFixed(1)}
+                                    maxTemp={Number(tempUnit === 'C' ? day.day.maxtemp_c : ((day.day.maxtemp_c * 9/5) + 32).toFixed(1))}
+                                    minTemp={Number(tempUnit === 'C' ? day.day.mintemp_c : ((day.day.mintemp_c * 9/5) + 32).toFixed(1))}
                                     conditionText={day.day.condition.text}
                                     conditionIcon={day.day.condition.icon}
                                     tempUnit={tempUnit}
